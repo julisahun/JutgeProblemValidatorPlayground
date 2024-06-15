@@ -12,6 +12,6 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
-    "jutge-problem-validator": "^1.0.5"
+    "jutge-problem-validator": "^1.0.6"
   }
 }
