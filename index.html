@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jutge Playground</title>
+  </head>
+  <body>
+    <h1>Jutge Problem Validator Playground</h1>
+    
+    <ul class="list">
+        <li class="property"> 
+            recursive
+            <input type="checkbox" id="recursive"/>
+            false
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            true
+        </li> 
+        <li class="property">
+            iterative
+            <input type="checkbox" id="iterative" />
+        </li>
+        <li class="property">
+            use library
+            <input id="useLib" />
+        </li>
+        <li class="property">
+            do not use library
+            <input id="noUseLib" /> 
+        </li>
+    </ul>
+
+    <input class="code-input" type="file" id="file" />
+    <button id="main"> validate program! </button>
+    <pre id="output" />
+    <script type="module" src="main.js"></script>
+
+</body>
+</html>
