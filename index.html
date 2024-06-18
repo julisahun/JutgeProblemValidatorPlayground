@@ -4,34 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jutge Playground</title>
-    <script type="module" crossorigin src="/JutgeProblemValidatorPlayground/assets/index-B-bT2GkQ.js"></script>
-    <link rel="stylesheet" crossorigin href="/JutgeProblemValidatorPlayground/assets/index-Cb4-57ZJ.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.1/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.1/cdn/shoelace-autoloader.js"></script>
+    <script type="module" crossorigin src="/JutgeProblemValidatorPlayground/assets/index-Dj-sibhb.js"></script>
+    <link rel="stylesheet" crossorigin href="/JutgeProblemValidatorPlayground/assets/index-Dy5ujLBI.css">
   </head>
   <body>
-    <h1>Jutge Problem Validator Playground test</h1>
-    
-    <ul class="list">
-        <li class="property"> 
-            recursive
-            <input type="checkbox" id="recursive"/>
-            false
-            <input type="checkbox" id="iterative"/>
-            true
-        </li>
-        <li class="property">
-            use library
-            <input id="useLib" />
-        </li>
-        <li class="property">
-            do not use library
-            <input id="noUseLib" /> 
-        </li>
-    </ul>
-
-
-    <input class="code-input" type="file" id="file" />
-    <button id="main"> validate program! </button>
-    <pre id="output" />
+    <h1 class="font-bold text-4xl text-center my-10">Jutge Problem Validator Playground test</h1>
+    <div class="w-full flex justify-between px-72">
+        <section class="flex flex-col">
+            <p class="text-xl text-center underline mb-10"> Configurations</p>
+            <div class="flex flex-col gap-2">
+                <div class="flex w-full justify-between">
+                    recursive
+                    <sl-checkbox class="checkbox" id="rec-checkbox">enabled</sl-checkbox>
+                    <sl-switch class="switch invisible" id="rec-switch" />
+                </div>
+                <div class="flex w-full justify-between">
+                    iterative
+                    <sl-checkbox class="checkbox" id="iter-checkbox">enabled</sl-checkbox>
+                    <sl-switch class="switch invisible" id="iter-switch" />
+                </div>
+                <div class="flex w-full gap-2 justify-between">
+                    forced libraries
+                    <sl-input class="input" />
+                </div>
+                <div class="flex w-full gap-2 justify-between">
+                    prohibited libraries
+                    <sl-input class="input" /> 
+                </div>
+            </div>
+            <div class="mt-10 w-full">
+                <input class="code-input" type="file" id="file" />
+            </div>
+            <div class="mt-10 w-full">
+                <sl-button id="main" class="w-full"> validate program! </sl-button>
+            </div>
+        </section>
+        <section>
+            <p class="text-xl text-center underline mb-10"> options </p> 
+            <pre id="options"> </pre>
+        </section>
+        <section>
+            <p class="text-xl text-center underline mb-10"> result </p> 
+            <pre id="result"> </pre>
+        </section>
+    </div>
 
 </body>
 </html>
