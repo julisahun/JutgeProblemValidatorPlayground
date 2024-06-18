@@ -67,17 +67,15 @@ iterSwitch.addEventListener('click', () => {
 })
 
 forcedLib.addEventListener('input', (e) => {
-  options.libraries.forced = e.target.value.split(',').map(lib => lib.trim())
+  options.libraries.forced = e.target.value.split(',').map(lib => lib.trim()).filter(Boolean)
   setOptions()
 })
 
 prohibitedLib.addEventListener('input', (e) => {
-  options.libraries.prohibited = e.target.value.split(',').map(lib => lib.trim())
+  console.log(e.target.value.split(',').map(lib => lib.trim()))
+  options.libraries.prohibited = e.target.value.split(',').map(lib => lib.trim()).filter(Boolean)
   setOptions()
 })
-
-
-
 
 function setOptions() {
   document.getElementById('options').innerText = JSON.stringify(options, null, 2)
